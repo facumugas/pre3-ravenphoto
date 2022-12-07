@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/lago.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+nav {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo {
+  width: 70px;
+  margin-left: 20px;
+  filter: invert(1);
+}
+nav .bar-btn {
+  font-size: 25px;
+  color: white;
+  margin-right: 20px;
+  cursor: pointer;
+}
+nav .bar-btn :hover {
+  color: red;
+}
+nav .nav-menu {
+  position: fixed;
+  width: 100%;
+  height: 0;
+  top: 100px;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  transition: all 0.5s;
+  padding: 0;
+}
+nav .nav-menu li {
+  display: none;
+  line-height: 30px;
+  margin: 50px 0;
+  transition: all 0.5s;
+}
+nav .nav-menu li a {
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+}
+nav .nav-menu li a .activa, nav .nav-menu li a :hover {
+  color: red;
+  transition: 0.3s;
+}
+
+#check {
+  display: none;
+}
+
+#check:checked ~ .nav-menu {
+  height: 100vh;
+}
+
+#check:checked ~ .nav-menu li {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    height: 100px;
+  }
+  nav .logo {
+    margin-left: 50px;
+  }
+  nav .bar-btn {
+    display: none;
+  }
+  nav .nav-menu {
+    position: relative;
+    height: 100px;
+    top: 0;
+    background: none;
+    transition: none;
+    text-align: right;
+    margin-right: 50px;
+  }
+  nav .nav-menu li {
+    display: inline-block;
+    line-height: 100px;
+    margin: 0 20px;
+    transition: none;
+  }
+  nav .nav-menu li a {
+    font-size: 15px;
+    text-decoration: none;
+  }
+}
+.nav-menu li a:hover {
+  color: red;
+  transition: 0.7s;
+  letter-spacing: 0.25em;
+}
+
+.banner-text {
+  margin: 70px;
+  padding: 0 30px;
+  margin-top: 200px;
+  text-align: center;
+  color: white;
+}
+.banner-text h2 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.banner-text h2:hover {
+  color: red;
+  transition: 0.7s;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: white;
+  height: 70px;
+  align-items: center;
+  padding: 10px;
+}
+footer h3 {
+  font-size: 20px;
+}
+footer .foot {
+  display: flex;
+  align-items: center;
+  color: black;
+}
+footer .foot img {
+  height: 25px;
+  margin-right: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    height: 70px;
+    align-items: center;
+    padding: 10px;
+  }
+  footer .foot {
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+  footer .foot h3 {
+    font-size: 12px;
+  }
+  footer .foot img {
+    height: 50px;
+    margin-right: 10px;
+  }
+}
+
+/*# sourceMappingURL=nosotros.css.map */
